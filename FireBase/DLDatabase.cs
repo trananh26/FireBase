@@ -36,22 +36,25 @@ namespace FireBase
                 {
                     foreach (var entry in sensorDataDict)
                     {
-                        DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(entry.Value.ID).UtcDateTime;
+                        if (entry.Value.Current !="nan")
+                        {
+                            DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(entry.Value.ID).UtcDateTime;
 
-                        SensorData _ss = new SensorData();                        
-                        _ss.ID = entry.Value.ID;
-                        _ss.UpdateTime = dateTime.AddHours(7).ToString("yyyy-MM-dd HH:mm:ss");
-                        _ss.Current = entry.Value.Current;
-                        _ss.Voltage = entry.Value.Voltage;
-                        _ss.Frequency = entry.Value.Frequency;
+                            SensorData _ss = new SensorData();
+                            _ss.ID = entry.Value.ID;
+                            _ss.UpdateTime = dateTime.AddHours(7).ToString("yyyy-MM-dd HH:mm:ss");
+                            _ss.Current = entry.Value.Current;
+                            _ss.Voltage = entry.Value.Voltage;
+                            _ss.Frequency = entry.Value.Frequency;
 
-                        _ss.Power = entry.Value.Power;
-                        _ss.Energy = entry.Value.Energy;
-                        _ss.PF = entry.Value.PF;
+                            _ss.Power = entry.Value.Power;
+                            _ss.Energy = entry.Value.Energy;
+                            _ss.PF = entry.Value.PF;
 
-                        lst.Add(_ss);
-
-                    }
+                            lst.Add(_ss);
+                        }    
+                       
+                   }
                     lst = lst.OrderByDescending(s => s.ID).ToList();
                 } 
             }

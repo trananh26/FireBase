@@ -24,5 +24,32 @@ namespace FireBase
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnControl_Click(object sender, RoutedEventArgs e)
+        {
+            wdManual frm = new wdManual();
+            frm.ShowDialog();
+        }
+
+        private void btnHistory_Click(object sender, RoutedEventArgs e)
+        {
+            wdHistory frm = new wdHistory();
+            frm.ShowDialog();
+        }
+
+        private void btnDashboard_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

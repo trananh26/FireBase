@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Github\FireBase\FireBase\obj\Debug\
+D:\GitHub\FireBase\FireBase\obj\Debug\
 FireBase
 none
 false
 DEBUG;TRACE
-D:\Github\FireBase\FireBase\App.xaml
-3-1034094802
+D:\GitHub\FireBase\FireBase\App.xaml
+51017074981
 
-11-1961540636
-26-1148335438
-MainWindow.xaml;wdHistory.xaml;wdLogin.xaml;
+13-2042818523
+26103546482
+MainWindow.xaml;View\TemplatureLineChart.xaml;wdHistory.xaml;wdLogin.xaml;wdManual.xaml;
 
-False
+True
 

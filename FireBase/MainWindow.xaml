@@ -4,9 +4,160 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FireBase"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:v="clr-namespace:FireBase.View"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="980" Width="1750"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="24*"/>
+                <RowDefinition Height="1.5*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#2E4053">
+                <Image Source=".\Resources\TA logo2.png"/>
+                <Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Right" Fill="Gray"></Rectangle>
+            </Grid>
+            <Grid Grid.Row="1" Background="#2E4053">
+                <Button Height="50"  Background="#2E4053" BorderBrush="#2E4053"
+                    x:Name="btnDashboard" Click="btnDashboard_Click">
+                </Button>
+                <md:PackIcon Kind="ViewDashboardOutline" Width="35" Height="35" VerticalAlignment="Center" 
+                                     MouseDown="btnDashboard_Click" Margin="30,0,0,0" Background="#2E4053"/>
+                <TextBlock Text="Vận hành" FontSize="16" Height="20" Margin="90,0,0,0" Foreground="White"
+                       MouseDown="btnDashboard_Click"/>
+                <Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Right" Fill="Gray"></Rectangle>
+            </Grid>
+
+            <Grid Grid.Row="2" Background="#2E4053">
+                <Button Height="50"  Background="#2E4053" BorderBrush="#2E4053"
+                    x:Name="btnHistory" Click="btnHistory_Click">
+                </Button>
+                <md:PackIcon Kind="ArrangeSendBackward" Width="35" Height="35" VerticalAlignment="Center" 
+                                     Margin="30,0,0,0" MouseDown="btnHistory_Click" Background="#2E4053"/>
+                <TextBlock Text="Lịch sử" FontSize="16" Height="20" Margin="90,0,0,0" 
+                           MouseDown="btnHistory_Click" Foreground="White"/>
+                <Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Right" Fill="Gray"></Rectangle>
+            </Grid>
+
+            <Grid Grid.Row="3" Background="#2E4053">
+                <Button Height="50"  Background="#2E4053" BorderBrush="#2E4053"
+                    x:Name="btnControl" Click="btnControl_Click">
+                </Button>
+                <md:PackIcon Kind="Apps" Width="35" Height="35" VerticalAlignment="Center" Background="#2E4053"
+                                     Margin="30,0,0,0" MouseDown="btnControl_Click"/>
+                <TextBlock Text="Điều khiển" FontSize="16" Height="20" Foreground="White"
+                       Margin="90,0,0,0" MouseDown="btnControl_Click"/>
+                <Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Right" Fill="Gray"></Rectangle>
+            </Grid>
+
+
+            <Grid Grid.Row="4" Background="#2E4053">
+                <Button Height="50" x:Name="btnExit" Click="btnExit_Click" VerticalAlignment="Top"
+                    Background="#2E4053" BorderBrush="#2E4053" >
+                </Button>
+                <md:PackIcon Kind="ExitToApp" Width="35" Height="35" VerticalAlignment="Center" Background="#2E4053"
+                                     Margin="30,0,0,0" MouseDown="btnExit_Click"/>
+                <TextBlock Text="Thoát" FontSize="16" Height="20" Margin="90,0,0,0" 
+                           Foreground="White" MouseDown="btnExit_Click"/>
+                <Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Right" Fill="Gray"></Rectangle>
+            </Grid>
+            <Grid Grid.Row="5" Background="#2E4053">
+
+            </Grid>
+            <Grid Grid.Row="6" Background="#2E4053">
+                <Image Source=".\Resources\Logo user.png"
+                   Width="60" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="lblUser" Text="Admin" Foreground="White" FontSize="12" Height="15" Margin="50,-10,0,0"/>
+                <Image Source=".\Resources\green dot.png"
+                   Height="10" Width="10" HorizontalAlignment="Left" Margin="55,20,0,0" />
+                <TextBlock  Text="Online" FontSize="10" Height="10" Foreground="White"  Margin="70,20,0,0"/>
+                <Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Right" Fill="Gray"></Rectangle>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel>
+                    <TextBlock Width="900" Height="35" VerticalAlignment="Center" 
+                           Margin="0,20,0,-30" TextAlignment="Center" FontSize="28"
+                           Text="TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI" 
+                           HorizontalAlignment="Center" FontWeight="Bold"/>
+
+                    <TextBlock Width="500" Height="25" VerticalAlignment="Bottom" 
+                           Margin="0,0,10,-60" TextAlignment="Center"
+                           Text="KHOA ĐIỆN" HorizontalAlignment="Center" 
+                           FontWeight="Bold" FontSize="20"/>
+
+                    <TextBlock Width="700" Height="25" VerticalAlignment="Bottom" 
+                           Margin="0,65,10,-50" TextAlignment="Center"
+                           Text="HỆ THỐNG QUẢN LÝ " HorizontalAlignment="Center" 
+                           FontWeight="Bold" FontSize="20"/>
+
+                </StackPanel>
+
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.05*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.05*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.02*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <v:TemplatureLineChart/>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <v:TemplatureLineChart/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.05*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.05*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.02*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <v:TemplatureLineChart/>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <v:TemplatureLineChart/>
+                </Grid>
+            </Grid>
+        </Grid>
     </Grid>
+
 </Window>

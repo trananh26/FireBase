@@ -27,3 +27,8 @@ D:\Github\FireBase\FireBase\bin\Debug\Newtonsoft.Json.dll
 D:\Github\FireBase\FireBase\bin\Debug\RestSharp.dll
 D:\Github\FireBase\FireBase\bin\Debug\Newtonsoft.Json.xml
 D:\Github\FireBase\FireBase\bin\Debug\RestSharp.xml
+D:\GitHub\FireBase\FireBase\obj\Debug\View\TemplatureLineChart.g.cs
+D:\GitHub\FireBase\FireBase\obj\Debug\View\TemplatureLineChart.baml
+D:\GitHub\FireBase\FireBase\obj\Debug\wdManual.g.cs
+D:\GitHub\FireBase\FireBase\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\GitHub\FireBase\FireBase\obj\Debug\wdManual.baml
