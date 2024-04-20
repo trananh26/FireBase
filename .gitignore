@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/FireBase/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/.vs/FireBase/FileContentIndex
+*.cache
+*.lref
+/FireBase/obj/Debug/FireBase_MarkupCompile.cache
+/FireBase/obj/Debug/wdHistory.baml
+/FireBase/obj/Debug/App.baml
+/FireBase/obj/Debug/wdLogin.baml
