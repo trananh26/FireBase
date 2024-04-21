@@ -8,7 +8,7 @@
         xmlns:v="clr-namespace:FireBase.View"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        mc:Ignorable="d"
+        mc:Ignorable="d" ResizeMode="NoResize"
         Title="MainWindow" Height="980" Width="1750"
         WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
@@ -113,7 +113,7 @@
 
                     <TextBlock Width="700" Height="25" VerticalAlignment="Bottom" 
                            Margin="0,65,10,-50" TextAlignment="Center"
-                           Text="HỆ THỐNG QUẢN LÝ " HorizontalAlignment="Center" 
+                           Text="HỆ THỐNG QUẢN LÝ ĐIỆN NĂNG" HorizontalAlignment="Center" 
                            FontWeight="Bold" FontSize="20"/>
 
                 </StackPanel>
@@ -121,11 +121,85 @@
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
                     <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.1*"/>
                     <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.1*"/>
                     <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.1*"/>
                     <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.1*"/>
                 </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+
+                    <md:Card Height="110" Background="#b5ab69">
+                        <StackPanel>
+                            <md:PackIcon Kind="Leaf" Height="35" Width="35" 
+                                        HorizontalAlignment="Right" Margin="0,10,30,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="Điện áp" VerticalAlignment="Bottom" FontSize="18" 
+                                        Margin="15,5,0,0" FontFamily="Times New Roman" />
+
+                            
+                        </StackPanel>
+                    </md:Card>
+
+                </Grid>
+                <Grid Grid.Column="3" >
+                    <md:Card Height="110" Background="#99793a">
+                        <StackPanel>
+                            <md:PackIcon Kind="SatelliteVariant"  Height="35" Width="35" 
+                                        HorizontalAlignment="Right" Margin="0,10,30,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="Cường độ dòng điện" VerticalAlignment="Bottom" FontSize="18" 
+                                        Margin="15,5,0,0" FontFamily="Times New Roman" />
+
+
+                        </StackPanel>
+                    </md:Card>
+                </Grid>
+                <Grid Grid.Column="5">
+                    <md:Card Height="110" Background="#6e4c09">
+                        <StackPanel>
+                            <md:PackIcon Kind="Radiator" Height="35" Width="35" 
+                                        HorizontalAlignment="Right" Margin="0,10,30,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="Công suất tải" VerticalAlignment="Bottom" FontSize="18" 
+                                        Margin="15,5,0,0" FontFamily="Times New Roman" />
+
+
+                        </StackPanel>
+                    </md:Card>
+                </Grid>
+                <Grid Grid.Column="7">
+                    <md:Card Height="110" Background="#995a3a">
+                        <StackPanel>
+                            <md:PackIcon Kind="Radioactive" Height="35" Width="35" 
+                                        HorizontalAlignment="Right" Margin="0,10,30,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="Điện năng tiêu thụ" VerticalAlignment="Bottom" FontSize="18" 
+                                        Margin="15,5,0,0" FontFamily="Times New Roman" />
+
+
+                        </StackPanel>
+                    </md:Card>
+                </Grid>
+                <Grid Grid.Column="9" >
+                    <md:Card Height="110" Background="#5f750d">
+                        <StackPanel>
+                            <md:PackIcon Kind="Steam" Height="35" Width="35" 
+                                        HorizontalAlignment="Right" Margin="0,10,30,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="Hệ số công suất" VerticalAlignment="Bottom" FontSize="18" 
+                                        Margin="15,5,0,0" FontFamily="Times New Roman" />
+
+
+                        </StackPanel>
+                    </md:Card>
+                </Grid>
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
@@ -155,6 +229,40 @@
                 </Grid>
                 <Grid Grid.Column="3">
                     <v:TemplatureLineChart/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.05*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.05*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.02*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <TextBlock Text="Biểu đồ lịch sử điện áp" VerticalAlignment="Center" HorizontalAlignment="Center"
+                               FontFamily="Times New Roman" FontSize="14"/>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <TextBlock Text="Biểu đồ lịch sử cường độ dòng điện" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                FontFamily="Times New Roman" FontSize="14"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.05*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.05*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.02*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <TextBlock Text="Biểu đồ lịch sử công suất tải" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                FontFamily="Times New Roman" FontSize="14"/>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <TextBlock Text="Biểu đồ lịch sử điện năng tiêu thụ" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                FontFamily="Times New Roman" FontSize="14"/>
                 </Grid>
             </Grid>
         </Grid>
