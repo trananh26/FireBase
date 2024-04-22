@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace FireBase
 {
@@ -20,14 +21,44 @@ namespace FireBase
     /// </summary>
     public partial class MainWindow : Window
     {
+        BLDatabase oBL = new BLDatabase();
         public MainWindow()
         {
             InitializeComponent();
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMinutes(1);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            GetCurrentParam();
+            GetParamForChart();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            GetCurrentParam();
+            GetParamForChart();
+        }
 
+        private void GetParamForChart()
+        {
+            List<SensorData> lst = new List<SensorData>();
+            lst = oBL.GetHistoryByWeek();
+        }
+
+        private void GetCurrentParam()
+        {
+            SensorData _ss = new SensorData();
+            _ss = oBL.GetCurentParameter();
+
+            lblVolt.Text = _ss.Voltage;
+            lblAmpe.Text = _ss.Current;
+            lblWoat.Text = _ss.Power;
+            lblKWoatH.Text = _ss.Energy;
+            lblPf.Text = _ss.PF;
         }
 
         private void btnControl_Click(object sender, RoutedEventArgs e)

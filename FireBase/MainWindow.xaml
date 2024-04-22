@@ -135,11 +135,11 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1">
 
-                    <md:Card Height="110" Background="#b5ab69">
+                    <md:Card Height="110" Background="#ECF2DC">
                         <StackPanel>
                             <md:PackIcon Kind="Leaf" Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
-                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0" x:Name="lblVolt"/>
                             <TextBlock Text="Điện áp" VerticalAlignment="Bottom" FontSize="18" 
                                         Margin="15,5,0,0" FontFamily="Times New Roman" />
 
@@ -149,11 +149,11 @@
 
                 </Grid>
                 <Grid Grid.Column="3" >
-                    <md:Card Height="110" Background="#99793a">
+                    <md:Card Height="110" Background="#ECF2DC">
                         <StackPanel>
                             <md:PackIcon Kind="SatelliteVariant"  Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
-                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0" x:Name="lblAmpe"/>
                             <TextBlock Text="Cường độ dòng điện" VerticalAlignment="Bottom" FontSize="18" 
                                         Margin="15,5,0,0" FontFamily="Times New Roman" />
 
@@ -162,11 +162,11 @@
                     </md:Card>
                 </Grid>
                 <Grid Grid.Column="5">
-                    <md:Card Height="110" Background="#6e4c09">
+                    <md:Card Height="110" Background="#ECF2DC">
                         <StackPanel>
                             <md:PackIcon Kind="Radiator" Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
-                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0" x:Name="lblWoat"/>
                             <TextBlock Text="Công suất tải" VerticalAlignment="Bottom" FontSize="18" 
                                         Margin="15,5,0,0" FontFamily="Times New Roman" />
 
@@ -175,11 +175,11 @@
                     </md:Card>
                 </Grid>
                 <Grid Grid.Column="7">
-                    <md:Card Height="110" Background="#995a3a">
+                    <md:Card Height="110" Background="#ECF2DC">
                         <StackPanel>
                             <md:PackIcon Kind="Radioactive" Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
-                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0" x:Name="lblKWoatH"/>
                             <TextBlock Text="Điện năng tiêu thụ" VerticalAlignment="Bottom" FontSize="18" 
                                         Margin="15,5,0,0" FontFamily="Times New Roman" />
 
@@ -188,11 +188,11 @@
                     </md:Card>
                 </Grid>
                 <Grid Grid.Column="9" >
-                    <md:Card Height="110" Background="#5f750d">
+                    <md:Card Height="110" Background="#ECF2DC">
                         <StackPanel>
                             <md:PackIcon Kind="Steam" Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
-                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0"/>
+                            <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0" x:Name="lblPf"/>
                             <TextBlock Text="Hệ số công suất" VerticalAlignment="Bottom" FontSize="18" 
                                         Margin="15,5,0,0" FontFamily="Times New Roman" />
 
