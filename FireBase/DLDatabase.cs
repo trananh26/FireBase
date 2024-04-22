@@ -81,7 +81,7 @@ namespace FireBase
                         {
                             DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(entry.Value.ID).UtcDateTime;
                             ///Lấy lịch sử 7 giờ gần nhất trong ngày
-                            if (dateTime.Hour <= DateTime.Now.Hour && dateTime.Hour >= DateTime.Now.Hour - 6 && dateTime.Date == DateTime.Now.Date)
+                            if ((dateTime.Hour + 7) <= DateTime.Now.Hour && (dateTime.Hour + 7) >= DateTime.Now.Hour - 6 && dateTime.Date == DateTime.Now.Date)
                             {
                                 SensorData _ss = new SensorData();
                                 _ss.ID = entry.Value.ID;
