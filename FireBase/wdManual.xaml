@@ -29,8 +29,8 @@
                         Content="Bật đèn" Click="btnOpenLamp_Click" FontFamily="Times New Roman"/>
             </Grid>
             <Grid Grid.Column="1">
-                <Button Width="120" x:Name="btnCloseLamp" Background="#4A4458" BorderThickness="0"
-                        Content="Tắt đèn" Click="btnCloseLamp_Click" FontFamily="Times New Roman"/>
+                <Button Width="120" x:Name="btnOpenAir" Background="#4A4458" BorderThickness="0"
+                        Content="Bật điều hòa" Click="btnOpenAir_Click" FontFamily="Times New Roman"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="2">
@@ -43,8 +43,8 @@
                         Content="Mở quạt" Click="btnOpenFan_Click" FontFamily="Times New Roman"/>
             </Grid>
             <Grid Grid.Column="1">
-                <Button Width="120" x:Name="btnCloseFan" Background="#4A4458" BorderThickness="0"
-                        Content="Tắt quạt" Click="btnCloseFan_Click" FontFamily="Times New Roman"/>
+                <Button Width="120" x:Name="btnOpenOther" Background="#4A4458" BorderThickness="0"
+                        Content="Bật nóng lạnh" Click="btnOpenOther_Click"  FontFamily="Times New Roman"/>
             </Grid>
         </Grid>
 

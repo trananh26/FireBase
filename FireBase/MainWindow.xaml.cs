@@ -29,6 +29,16 @@ namespace FireBase
             timer.Interval = TimeSpan.FromMinutes(1);
             timer.Tick += Timer_Tick;
             timer.Start();
+
+            DispatcherTimer timerX = new DispatcherTimer();
+            timerX.Interval = TimeSpan.FromSeconds(1);
+            timerX.Tick += TimerX_Tick; ;
+            timerX.Start();
+        }
+
+        private void TimerX_Tick(object sender, EventArgs e)
+        {
+            lblDateTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + "     ";
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -47,6 +57,7 @@ namespace FireBase
         {
             List<SensorData> lst = new List<SensorData>();
             lst = oBL.GetHistoryByWeek();
+
         }
 
         private void GetCurrentParam()
@@ -57,8 +68,20 @@ namespace FireBase
             lblVolt.Text = _ss.Voltage;
             lblAmpe.Text = _ss.Current;
             lblWoat.Text = _ss.Power;
-            lblKWoatH.Text = _ss.Energy;
+
             lblPf.Text = _ss.PF;
+
+
+            //Lấy thông số ngày đầu của tháng
+            SensorData _ss1 = new SensorData();
+            _ss1 = oBL.GetHistoryOfFirstDay();
+            if (_ss1 != null)
+            {
+                lblKWoatH.Text = (int.Parse(_ss1.Energy) - int.Parse(_ss.Energy)).ToString();
+            }
+            else
+                lblKWoatH.Text = "0";
+
         }
 
         private void btnControl_Click(object sender, RoutedEventArgs e)

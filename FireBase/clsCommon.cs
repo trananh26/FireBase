@@ -11,6 +11,20 @@ namespace FireBase
     {
     }
 
+    public class Eqiupment
+    {
+        [JsonProperty("Air")]    //Điều hòa
+        public string Air { get; set; }
+
+        [JsonProperty("Fan")]    //Quạt
+        public string Fan { get; set; }
+
+        [JsonProperty("Lamp")]    //Bóng đèn
+        public string Lamp { get; set; }
+
+        [JsonProperty("Other")]    //Ổ kéo dài
+        public string Other { get; set; }
+    }
 
     public class SensorData
     {

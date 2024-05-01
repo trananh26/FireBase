@@ -8,7 +8,7 @@
         xmlns:v="clr-namespace:FireBase.View"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        mc:Ignorable="d" ResizeMode="NoResize"
+        mc:Ignorable="d" 
         Title="MainWindow" Height="980" Width="1750"
         WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
@@ -32,7 +32,7 @@
                 <Rectangle StrokeThickness="1" Width="1" HorizontalAlignment="Right" Fill="Gray"></Rectangle>
             </Grid>
             <Grid Grid.Row="1" Background="#2E4053">
-                <Button Height="50"  Background="#2E4053" BorderBrush="#2E4053"
+                <Button Height="60"  Background="#2E4053" BorderBrush="#2E4053"
                     x:Name="btnDashboard" Click="btnDashboard_Click">
                 </Button>
                 <md:PackIcon Kind="ViewDashboardOutline" Width="35" Height="35" VerticalAlignment="Center" 
@@ -43,7 +43,7 @@
             </Grid>
 
             <Grid Grid.Row="2" Background="#2E4053">
-                <Button Height="50"  Background="#2E4053" BorderBrush="#2E4053"
+                <Button Height="60"  Background="#2E4053" BorderBrush="#2E4053"
                     x:Name="btnHistory" Click="btnHistory_Click">
                 </Button>
                 <md:PackIcon Kind="ArrangeSendBackward" Width="35" Height="35" VerticalAlignment="Center" 
@@ -54,7 +54,7 @@
             </Grid>
 
             <Grid Grid.Row="3" Background="#2E4053">
-                <Button Height="50"  Background="#2E4053" BorderBrush="#2E4053"
+                <Button Height="60"  Background="#2E4053" BorderBrush="#2E4053"
                     x:Name="btnControl" Click="btnControl_Click">
                 </Button>
                 <md:PackIcon Kind="Apps" Width="35" Height="35" VerticalAlignment="Center" Background="#2E4053"
@@ -66,7 +66,7 @@
 
 
             <Grid Grid.Row="4" Background="#2E4053">
-                <Button Height="50" x:Name="btnExit" Click="btnExit_Click" VerticalAlignment="Top"
+                <Button Height="60" x:Name="btnExit" Click="btnExit_Click" VerticalAlignment="Top"
                     Background="#2E4053" BorderBrush="#2E4053" >
                 </Button>
                 <md:PackIcon Kind="ExitToApp" Width="35" Height="35" VerticalAlignment="Center" Background="#2E4053"
@@ -135,7 +135,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1">
 
-                    <md:Card Height="110" Background="#ECF2DC">
+                    <md:Card Height="110" Background="#CFD8CD" VerticalAlignment="Top">
                         <StackPanel>
                             <md:PackIcon Kind="Leaf" Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
@@ -149,7 +149,7 @@
 
                 </Grid>
                 <Grid Grid.Column="3" >
-                    <md:Card Height="110" Background="#ECF2DC">
+                    <md:Card Height="110" Background="#D1C6B8" VerticalAlignment="Top">
                         <StackPanel>
                             <md:PackIcon Kind="SatelliteVariant"  Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
@@ -162,7 +162,7 @@
                     </md:Card>
                 </Grid>
                 <Grid Grid.Column="5">
-                    <md:Card Height="110" Background="#ECF2DC">
+                    <md:Card Height="110" Background="#CFD8CD" VerticalAlignment="Top">
                         <StackPanel>
                             <md:PackIcon Kind="Radiator" Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
@@ -170,33 +170,29 @@
                             <TextBlock Text="Công suất tải" VerticalAlignment="Bottom" FontSize="18" 
                                         Margin="15,5,0,0" FontFamily="Times New Roman" />
 
-
                         </StackPanel>
                     </md:Card>
                 </Grid>
                 <Grid Grid.Column="7">
-                    <md:Card Height="110" Background="#ECF2DC">
+                    <md:Card Height="110" Background="#D1C6B8" VerticalAlignment="Top">
                         <StackPanel>
                             <md:PackIcon Kind="Radioactive" Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
                             <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0" x:Name="lblKWoatH"/>
-                            <TextBlock Text="Điện năng tiêu thụ" VerticalAlignment="Bottom" FontSize="18" 
+                            <TextBlock Text="Điện năng tiêu thụ tháng" VerticalAlignment="Bottom" FontSize="18" 
                                         Margin="15,5,0,0" FontFamily="Times New Roman" />
-
 
                         </StackPanel>
                     </md:Card>
                 </Grid>
                 <Grid Grid.Column="9" >
-                    <md:Card Height="110" Background="#ECF2DC">
+                    <md:Card Height="110" Background="#CFD8CD" VerticalAlignment="Top">
                         <StackPanel>
                             <md:PackIcon Kind="Steam" Height="35" Width="35" 
                                         HorizontalAlignment="Right" Margin="0,10,30,0"/>
                             <TextBlock Text="00" FontSize="50" Margin="25,-30,0,0" x:Name="lblPf"/>
                             <TextBlock Text="Hệ số công suất" VerticalAlignment="Bottom" FontSize="18" 
                                         Margin="15,5,0,0" FontFamily="Times New Roman" />
-
-
                         </StackPanel>
                     </md:Card>
                 </Grid>
@@ -241,11 +237,11 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1">
                     <TextBlock Text="Biểu đồ lịch sử điện áp" VerticalAlignment="Center" HorizontalAlignment="Center"
-                               FontFamily="Times New Roman" FontSize="14"/>
+                               FontFamily="Times New Roman" FontSize="14" FontWeight="Bold"/>
                 </Grid>
                 <Grid Grid.Column="3">
                     <TextBlock Text="Biểu đồ lịch sử cường độ dòng điện" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                FontFamily="Times New Roman" FontSize="14"/>
+                                FontFamily="Times New Roman" FontSize="14" FontWeight="Bold"/>
                 </Grid>
             </Grid>
             <Grid Grid.Row="5">
@@ -258,12 +254,15 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1">
                     <TextBlock Text="Biểu đồ lịch sử công suất tải" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                FontFamily="Times New Roman" FontSize="14"/>
+                                FontFamily="Times New Roman" FontSize="14" FontWeight="Bold"/>
                 </Grid>
                 <Grid Grid.Column="3">
                     <TextBlock Text="Biểu đồ lịch sử điện năng tiêu thụ" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                FontFamily="Times New Roman" FontSize="14"/>
+                                FontFamily="Times New Roman" FontSize="14" FontWeight="Bold"/>
                 </Grid>
+            </Grid>
+            <Grid Grid.Row="6">
+                <TextBlock x:Name="lblDateTime" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             </Grid>
         </Grid>
     </Grid>
