@@ -14,16 +14,16 @@ namespace FireBase
     public class Eqiupment
     {
         [JsonProperty("Air")]    //Điều hòa
-        public string Air { get; set; }
+        public int Air { get; set; }
 
         [JsonProperty("Fan")]    //Quạt
-        public string Fan { get; set; }
+        public int Fan { get; set; }
 
         [JsonProperty("Lamp")]    //Bóng đèn
-        public string Lamp { get; set; }
+        public int Lamp { get; set; }
 
         [JsonProperty("Other")]    //Ổ kéo dài
-        public string Other { get; set; }
+        public int Other { get; set; }
       
     }
 

@@ -31,21 +31,21 @@ namespace FireBase
             Eqiupment _eq = new Eqiupment();
             _eq = oBL.GetEqiupmentstate();
 
-            if (_eq.Lamp == "1")
+            if (_eq.Lamp == 1)
             {
                 //Tắt đi
-                _eq.Lamp = "0";
+                _eq.Lamp = 0;
                 oBL.SetEqiupmentState(_eq);
-                btnOpenLamp.Content = "Bật đèn";
+                btnOpenLamp.Content = "Tắt đèn";
             }
             else
             {
                 //Bật lên
-                _eq.Lamp = "1";
+                _eq.Lamp = 1;
                 oBL.SetEqiupmentState(_eq);
-                btnOpenLamp.Content = "Tắt đèn";
+                btnOpenLamp.Content = "Bật đèn";
             }
-            MessageBox.Show(_eq.Lamp == "0" ? "Tắt bóng đèn thành công" : "Bật bóng đèn thành công");
+            MessageBox.Show(_eq.Lamp == 1 ? "Tắt bóng đèn thành công" : "Bật bóng đèn thành công");
         }
 
         private void btnOpenFan_Click(object sender, RoutedEventArgs e)
@@ -53,21 +53,21 @@ namespace FireBase
             Eqiupment _eq = new Eqiupment();
             _eq = oBL.GetEqiupmentstate();
 
-            if (_eq.Fan == "1")
+            if (_eq.Fan == 1)
             {
                 //Tắt đi
-                _eq.Fan = "0";
+                _eq.Fan = 0;
                 oBL.SetEqiupmentState(_eq);
-                btnOpenFan.Content = "Bật quạt";
+                btnOpenFan.Content = "Tắt quạt";
             }
             else
             {
                 //Bật lên
-                _eq.Fan = "1";
+                _eq.Fan = 1;
                 oBL.SetEqiupmentState(_eq);
-                btnOpenFan.Content = "Tắt quạt";
+                btnOpenFan.Content = "Bật quạt";
             }
-            MessageBox.Show(_eq.Fan == "0" ? "Tắt quạt thành công" : "Bật quạt thành công");
+            MessageBox.Show(_eq.Fan == 1 ? "Tắt quạt thành công" : "Bật quạt thành công");
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -87,10 +87,10 @@ namespace FireBase
 
             if (_eq != null)
             {
-                btnOpenAir.Content = _eq.Air == "1" ? "Tắt điều hòa" : "Bật điều hòa";
-                btnOpenFan.Content = _eq.Fan == "1" ? "Tắt quạt" : "Bật quạt";
-                btnOpenLamp.Content = _eq.Lamp == "1" ? "Tắt bóng đèn" : "Bật bóng đèn";
-                btnOpenOther.Content = _eq.Other == "1" ? "Tắt nguồn khác" : "Mở nguồn khác";
+                btnOpenAir.Content = _eq.Air == 0 ? "Tắt điều hòa" : "Bật điều hòa";
+                btnOpenFan.Content = _eq.Fan == 0 ? "Tắt quạt" : "Bật quạt";
+                btnOpenLamp.Content = _eq.Lamp == 0 ? "Tắt bóng đèn" : "Bật bóng đèn";
+                btnOpenOther.Content = _eq.Other == 0 ? "Tắt nguồn khác" : "Mở nguồn khác";
             }
         }
 
@@ -99,22 +99,22 @@ namespace FireBase
             Eqiupment _eq = new Eqiupment();
             _eq = oBL.GetEqiupmentstate();
 
-            if (_eq.Air == "1")
+            if (_eq.Air == 1)
             {
                 //Tắt đi
-                _eq.Air = "0";
+                _eq.Air = 0;
                 oBL.SetEqiupmentState(_eq);
-                btnOpenAir.Content = "Bật điều hòa";
+                btnOpenAir.Content = "Tắt điều hòa";
             }
             else
             {
                 //Bật lên
-                _eq.Air = "1";
+                _eq.Air = 1;
                 oBL.SetEqiupmentState(_eq);
-                btnOpenAir.Content = "Tắt điều hòa";
+                btnOpenAir.Content = "Bật điều hòa";
             }
 
-            MessageBox.Show(_eq.Air == "0" ? "Tắt điều hòa thành công" : "Bật điều hòa thành công");
+            MessageBox.Show(_eq.Air == 1 ? "Tắt điều hòa thành công" : "Bật điều hòa thành công");
 
         }
 
@@ -123,21 +123,21 @@ namespace FireBase
             Eqiupment _eq = new Eqiupment();
             _eq = oBL.GetEqiupmentstate();
 
-            if (_eq.Other == "1")
+            if (_eq.Other == 1)
             {
                 //Tắt đi
-                _eq.Other = "0";
+                _eq.Other = 0;
                 oBL.SetEqiupmentState(_eq);
-                btnOpenOther.Content = "Bật nguồn khác";
+                btnOpenOther.Content = "Tắt nguồn khác";
             }
             else
             {
                 //Bật lên
-                _eq.Other = "1";
+                _eq.Other = 1;
                 oBL.SetEqiupmentState(_eq);
-                btnOpenOther.Content = "Tắt nguồn khác";
+                btnOpenOther.Content = "Bật nguồn khác";
             }
-            MessageBox.Show(_eq.Other == "0" ? "Tắt nguồn khác thành công" : "Mở nguồn khác thành công");
+            MessageBox.Show(_eq.Other == 1 ? "Tắt nguồn khác thành công" : "Mở nguồn khác thành công");
         }
     }
 }

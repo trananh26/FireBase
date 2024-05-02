@@ -123,16 +123,16 @@ namespace FireBase
                     foreach (var key in State)
                     {
                         if (key.Key == "Air")
-                            eqiupment.Air = key.Value;
+                            eqiupment.Air = int.Parse(key.Value);
 
                         if (key.Key == "Fan")
-                            eqiupment.Fan = key.Value;
+                            eqiupment.Fan = int.Parse(key.Value);
 
                         if (key.Key == "Lamp")
-                            eqiupment.Lamp = key.Value;
+                            eqiupment.Lamp = int.Parse(key.Value);
 
                         if (key.Key == "Other")
-                            eqiupment.Other = key.Value;
+                            eqiupment.Other = int.Parse(key.Value);
                     }
                 }
             }
