@@ -227,17 +227,20 @@ namespace FireBase
             _ss1 = oBL.GetHistoryOfFirstDay();
             if (_ss1 != null)
             {
-                lblKWoatH.Text = (double.Parse(_ss1.Energy) - double.Parse(_ss.Energy)).ToString();
+                lblKWoatH.Text = Math.Round(double.Parse(_ss.Energy) - double.Parse(_ss1.Energy), 3).ToString();
             }
             else
                 lblKWoatH.Text = "0";
 
 
             //Cập nhật lại điện năng tiêu thụ tháng
-            Eqiupment _eq = new Eqiupment();
-            _eq = oBL.GetEqiupmentstate();
-            _eq.CurrentEnergy = lblKWoatH.Text;
-            oBL.SetEqiupmentState(_eq);
+            CurrentParameter param = new CurrentParameter();
+
+            param.CurrentEnergy = lblKWoatH.Text;
+            param.CurrentPower = lblWoat.Text;
+            param.CrCurrent = lblAmpe.Text;
+            param.CurrentVoltage = lblVolt.Text;
+            oBL.SetCurrentParam(param);
         }
 
         /// <summary>

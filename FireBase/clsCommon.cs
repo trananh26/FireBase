@@ -24,10 +24,23 @@ namespace FireBase
 
         [JsonProperty("Other")]    //Ổ kéo dài
         public string Other { get; set; }
+      
+    }
+
+    public class CurrentParameter
+    {
 
         [JsonProperty("CurrentEnergy")]    //Điện năng tiêu thụ
         public string CurrentEnergy { get; set; }
-        
+
+        [JsonProperty("CurrentPower")]    // Công suất tải W
+        public string CurrentPower { get; set; }
+
+        [JsonProperty("CurrentVoltage")]    // Điện áp cấp
+        public string CurrentVoltage { get; set; }
+
+        [JsonProperty("CrCurrent")]   //Cường độ dòng điện A
+        public string CrCurrent { get; set; }
     }
 
     public class SensorData

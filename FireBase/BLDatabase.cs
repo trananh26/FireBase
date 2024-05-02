@@ -50,5 +50,10 @@ namespace FireBase
         {
             return oDL.GetHistoryOfFirstDay();
         }
+
+        public void SetCurrentParam(CurrentParameter param)
+        {
+            oDL.SetCurrentParam(param);
+        }
     }
 }
