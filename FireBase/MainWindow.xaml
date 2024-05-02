@@ -206,10 +206,10 @@
                     <ColumnDefinition Width="0.02*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1">
-                    <v:TemplatureLineChart/>
+                    <v:TemplatureLineChart x:Name="uc_VoltReport"/>
                 </Grid>
                 <Grid Grid.Column="3">
-                    <v:TemplatureLineChart/>
+                    <v:TemplatureLineChart x:Name="uc_AmpeReport"/>
                 </Grid>
             </Grid>
             <Grid Grid.Row="4">
@@ -221,10 +221,10 @@
                     <ColumnDefinition Width="0.02*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1">
-                    <v:TemplatureLineChart/>
+                    <v:TemplatureLineChart x:Name="uc_WoatReport"/>
                 </Grid>
                 <Grid Grid.Column="3">
-                    <v:TemplatureLineChart/>
+                    <v:TemplatureLineChart x:Name="uc_KWhReport"/>
                 </Grid>
             </Grid>
             <Grid Grid.Row="3">

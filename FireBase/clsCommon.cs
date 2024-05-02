@@ -24,6 +24,10 @@ namespace FireBase
 
         [JsonProperty("Other")]    //Ổ kéo dài
         public string Other { get; set; }
+
+        [JsonProperty("CurrentEnergy")]    //Điện năng tiêu thụ
+        public string CurrentEnergy { get; set; }
+        
     }
 
     public class SensorData
