@@ -45,7 +45,7 @@ namespace FireBase
                 oBL.SetEqiupmentState(_eq);
                 btnOpenLamp.Content = "Tắt đèn";
             }
-            MessageBox.Show(_eq.Lamp == "1" ? "Tắt bóng đèn thành công" : "Bật bóng đèn thành công");
+            MessageBox.Show(_eq.Lamp == "0" ? "Tắt bóng đèn thành công" : "Bật bóng đèn thành công");
         }
 
         private void btnOpenFan_Click(object sender, RoutedEventArgs e)
@@ -67,7 +67,7 @@ namespace FireBase
                 oBL.SetEqiupmentState(_eq);
                 btnOpenFan.Content = "Tắt quạt";
             }
-            MessageBox.Show(_eq.Fan == "1" ? "Tắt quạt thành công" : "Bật quạt thành công");
+            MessageBox.Show(_eq.Fan == "0" ? "Tắt quạt thành công" : "Bật quạt thành công");
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -114,7 +114,7 @@ namespace FireBase
                 btnOpenAir.Content = "Tắt điều hòa";
             }
 
-            MessageBox.Show(_eq.Air == "1" ? "Tắt điều hòa thành công" : "Bật điều hòa thành công");
+            MessageBox.Show(_eq.Air == "0" ? "Tắt điều hòa thành công" : "Bật điều hòa thành công");
 
         }
 
@@ -137,7 +137,7 @@ namespace FireBase
                 oBL.SetEqiupmentState(_eq);
                 btnOpenOther.Content = "Tắt nguồn khác";
             }
-            MessageBox.Show(_eq.Other == "1" ? "Tắt nguồn khác thành công" : "Mở nguồn khác thành công");
+            MessageBox.Show(_eq.Other == "0" ? "Tắt nguồn khác thành công" : "Mở nguồn khác thành công");
         }
     }
 }
